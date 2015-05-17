@@ -20,4 +20,11 @@ class Untitled_AppliedPatches_Block_Patches
     {
         return $this->_patchesHelper->getAppliedPatches();
     }
+
+    public function getPatchListLabel($patchName = '')
+    {
+        $appliedPatches = $this->getAppliedPatches();
+
+        return $patchName . ($patchName !== end($appliedPatches) ? ', ' : '');
+    }
 }

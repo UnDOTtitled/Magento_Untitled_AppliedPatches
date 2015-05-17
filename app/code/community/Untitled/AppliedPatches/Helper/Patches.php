@@ -5,6 +5,8 @@ class Untitled_AppliedPatches_Helper_Patches
 {
     const APPLIED_PATCHES_FILE_NAME = 'applied.patches.list';
 
+    const PATCH_HEADER_SEPERATOR = '|';
+
     private $_appliedPatchesFilePath = '';
 
     private $_appliedPatches = array();
@@ -28,11 +30,29 @@ class Untitled_AppliedPatches_Helper_Patches
     private function _loadPatchesFile()
     {
         $io = new Varien_Io_File;
-        echo "yeah";
+        $foundPatches = array();
+
         if (false === $io->fileExists($this->_appliedPatchesFilePath)) {
             return;
         }
-        echo "boi";
+
+        $io->streamOpen($this->_appliedPatchesFilePath, 'r');
+
+        while($buffer = $io->streamRead()) {
+            if (strstr($buffer, self::PATCH_HEADER_SEPERATOR)) {
+
+                list($timeStamp, $patchName, $productVersion) = array_map('trim', explode(self::PATCH_HEADER_SEPERATOR, $buffer));
+
+                $foundPatches[] = $patchName;
+            }
+        }
+        $io->streamClose();
+        $this->_setAppliedPatches($foundPatches);
+    }
+
+    private function _setAppliedPatches($foundPatches = array())
+    {
+        $this->_appliedPatches = $foundPatches;
     }
 
     private function _getAppliedPatchesFilePath()
