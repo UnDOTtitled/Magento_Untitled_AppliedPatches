@@ -2,7 +2,10 @@ var UntitledAppliedPatches = {};
 UntitledAppliedPatches.dialog = Class.create();
 
 UntitledAppliedPatches.dialog.prototype = {
+
+    //
     patchName: null,
+
     // Date the patch was either applied or reverted
     appliedRevertedOn: null,
 
@@ -15,7 +18,8 @@ UntitledAppliedPatches.dialog.prototype = {
 
     openDialogWindow: function() {
         var content = this._getContent();
-        var dialogWindow = Dialog.info(content, {
+
+        this.dialogWindow = Dialog.info(content, {
             draggable: true,
             resizable: true,
             closable: true,

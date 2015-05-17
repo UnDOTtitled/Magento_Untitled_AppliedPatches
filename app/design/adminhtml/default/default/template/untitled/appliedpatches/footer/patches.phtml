@@ -16,8 +16,8 @@
                 var el = event.findElement('a');
                 if(el) {
                     var patchName = el.readAttribute('data-patch-name') || '',
-                        patchDateRevertedOn = el.readAttribute('data-patch-applied-date') || '';
-                    new UntitledAppliedPatches.dialog(patchName, patchDateRevertedOn).openDialogWindow();
+                        patchDateAppliedRevertedOn = el.readAttribute('data-patch-applied-date') || '';
+                    new UntitledAppliedPatches.dialog(patchName, patchDateAppliedRevertedOn).openDialogWindow();
                 }
             });
         });
