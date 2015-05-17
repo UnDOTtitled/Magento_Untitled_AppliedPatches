@@ -9,3 +9,6 @@ app/etc/modules/Untitled_AppliedPatches.xml    app/etc/modules/Untitled_AppliedP
 # Adminhtml Design
 app/design/adminhtml/default/default/layout/untitled/appliedpatches.xml    app/design/adminhtml/default/default/layout/untitled/appliedpatches.xml
 app/design/adminhtml/default/default/template/untitled/appliedpatches    app/design/adminhtml/default/default/template/untitled/appliedpatches
+
+# JavaScript Libs
+js/untitled/appliedpatches    js/untitled/appliedpatches

@@ -9,6 +9,9 @@
             <action method="addCss">
                 <name>lib/prototype/windows/themes/magento.css</name>
             </action>
+            <action method="addJs">
+                <name>untitled/appliedpatches/dialog.js</name>
+            </action>
         </reference>
         <reference name="footer">
             <action method="setTemplate">
