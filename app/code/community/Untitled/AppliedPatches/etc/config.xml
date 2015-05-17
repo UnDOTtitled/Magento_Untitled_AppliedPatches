@@ -17,15 +17,6 @@
             </untitled_appliedpatches>
         </helpers>
     </global>
-    <admin>
-        <routers>
-            <adminhtml>
-                <args>
-
-                </args>
-            </adminhtml>
-        </routers>
-    </admin>
     <adminhtml>
         <layout>
             <updates>
