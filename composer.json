@@ -1,0 +1,8 @@
+{
+    "name": "untitled/applied-patches",
+    "type": "magento-module",
+    "description": "Applied Magento patches",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

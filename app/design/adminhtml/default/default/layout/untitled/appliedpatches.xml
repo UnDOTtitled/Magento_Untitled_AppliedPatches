@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="footer">
+            <action method="setTemplate">
+                <template>untitled/appliedpatches/footer.phtml</template>
+            </action>
+        </reference>
+    </default>
+</layout>

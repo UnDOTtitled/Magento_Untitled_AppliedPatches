@@ -1,0 +1,11 @@
+# Untitled - Applied Magento Patches
+
+# Module Code
+app/code/community/Untitled/AppliedPatches    app/code/community/Untitled/AppliedPatches
+
+# Module Initializer
+app/etc/modules/Untitled_AppliedPatches.xml    app/etc/modules/Untitled_AppliedPatches.xml
+
+# Adminhtml Design
+app/design/adminhtml/default/default/layout/untitled/appliedpatches.xml    app/design/adminhtml/default/default/layout/untitled/appliedpatches.xml
+app/design/adminhtml/default/default/template/untitled/appliedpatches    app/design/adminhtml/default/default/template/untitled/appliedpatches

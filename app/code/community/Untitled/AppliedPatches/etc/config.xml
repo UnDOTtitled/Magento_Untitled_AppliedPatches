@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Untitled_AppliedPatches>
+            <version>0.0.1</version>
+        </Untitled_AppliedPatches>
+    </modules>
+    <global>
+        <blocks>
+            <untitled_appliedpatches>
+                <class>Untitled_AppliedPatches_Block</class>
+            </untitled_appliedpatches>
+        </blocks>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <untitled_appliedpatches>
+                    <file>untitled/appliedpatches.xml</file>
+                </untitled_appliedpatches>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
