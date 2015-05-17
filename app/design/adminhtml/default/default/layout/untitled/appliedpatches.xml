@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <layout>
     <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>js_css</type>
+                <name>prototype/windows/themes/default.css</name>
+            </action>
+            <action method="addCss">
+                <name>lib/prototype/windows/themes/magento.css</name>
+            </action>
+        </reference>
         <reference name="footer">
             <action method="setTemplate">
                 <template>untitled/appliedpatches/footer.phtml</template>

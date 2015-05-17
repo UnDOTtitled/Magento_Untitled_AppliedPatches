@@ -5,7 +5,7 @@ class Untitled_AppliedPatches_Helper_Patches
 {
     const APPLIED_PATCHES_FILE_NAME = 'applied.patches.list';
 
-    const PATCH_HEADER_SEPERATOR = '|';
+    const PATCH_HEADER_DELIMITER = '|';
 
     private $_appliedPatchesFilePath = '';
 
@@ -38,12 +38,15 @@ class Untitled_AppliedPatches_Helper_Patches
 
         $io->streamOpen($this->_appliedPatchesFilePath, 'r');
 
-        while($buffer = $io->streamRead()) {
-            if (strstr($buffer, self::PATCH_HEADER_SEPERATOR)) {
+        while ($buffer = $io->streamRead()) {
+            if (strstr($buffer, self::PATCH_HEADER_DELIMITER)) {
 
-                list($timeStamp, $patchName, $productVersion) = array_map('trim', explode(self::PATCH_HEADER_SEPERATOR, $buffer));
+                list($appliedRevertedOnDate, $patchName) = $this->_getPatchHeaderParts($buffer);
 
-                $foundPatches[] = $patchName;
+                $foundPatches[] = array(
+                    'name'        => $patchName,
+                    'appliedOnDate' => $appliedRevertedOnDate
+                );
             }
         }
         $io->streamClose();
@@ -60,5 +63,10 @@ class Untitled_AppliedPatches_Helper_Patches
         return Mage::getModel('core/config_options')->getEtcDir()
         . DS
         . self::APPLIED_PATCHES_FILE_NAME;
+    }
+
+    private function _getPatchHeaderParts($string)
+    {
+        return array_map('trim', explode(self::PATCH_HEADER_DELIMITER, $string));
     }
 }

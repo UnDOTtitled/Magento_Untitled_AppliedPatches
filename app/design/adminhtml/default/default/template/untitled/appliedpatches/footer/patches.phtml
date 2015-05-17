@@ -1,9 +1,29 @@
 <?php /** @var Untitled_AppliedPatches_Block_Patches $this */ ?>
 <?php if($this->hasPatches()): ?>
+    <script>
+        function loadWindow(name) {
+            var dialogWindow = Dialog.info(name, {
+                draggable: true,
+                resizable: true,
+                closable: true,
+                className: "magento",
+                windowClassName: "popup-window",
+                title:  'Patch Info: ' + name,
+                top: 50,
+                width: 350,
+                height: 350,
+                zIndex: 1000,
+                recenterAuto: false,
+                hideEffect: Element.hide,
+                showEffect: Element.show,
+                id: "untitled-appliedpatches-dialog"
+            });
+        }
+    </script>
     <div>
         <b><?php echo $this->__('Applied Patches'); ?>: </b>
-        <?php foreach($this->getAppliedPatches() as $patchName): ?>
-            <a href="#"><?php echo $patchName; ?></a>, 
+        <?php foreach($this->getAppliedPatches() as $patch): ?>
+            <a href="#" onclick="loadWindow('<?php echo $patch['name']; ?>');"><?php echo $patch['name']; ?></a>,
         <?php endforeach; ?>
     </div>
 <?php endif; ?>
