@@ -11,7 +11,21 @@
                 <class>Untitled_AppliedPatches_Block</class>
             </untitled_appliedpatches>
         </blocks>
+        <helpers>
+            <untitled_appliedpatches>
+                <class>Untitled_AppliedPatches_Helper</class>
+            </untitled_appliedpatches>
+        </helpers>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
     <adminhtml>
         <layout>
             <updates>

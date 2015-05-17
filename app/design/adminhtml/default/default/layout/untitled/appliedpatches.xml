@@ -5,6 +5,7 @@
             <action method="setTemplate">
                 <template>untitled/appliedpatches/footer.phtml</template>
             </action>
+            <block type="untitled_appliedpatches/patches" name="page.footer.applied-patches" as="patches" template="untitled/appliedpatches/footer/patches.phtml"/>
         </reference>
     </default>
 </layout>

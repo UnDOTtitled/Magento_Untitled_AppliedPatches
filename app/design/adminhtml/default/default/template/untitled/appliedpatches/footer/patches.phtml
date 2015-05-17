@@ -1,0 +1,8 @@
+<?php /** @var Untitled_AppliedPatches_Block_Patches $this */ ?>
+<?php if($this->hasPatches()): ?>
+    <ul>
+        <li>PATCH</li>
+    </ul>
+<?php else: ?>
+    <?php echo $this->__('Magento ver. %s', Mage::getVersion()); ?>
+<?php endif; ?>
