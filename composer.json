@@ -1,7 +1,15 @@
 {
-    "name": "untitled/applied-patches",
+    "name": "untitled/magento-applied-patches",
     "type": "magento-module",
-    "description": "Applied Magento patches",
+    "description": "Display applied patches in the footer of the Admin section",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Un.titled",
+            "email": "hello@un.titled.co.uk",
+            "homepage": "http://un.titled.co.uk/"
+        }
+    ],
     "require": {
         "magento-hackathon/magento-composer-installer": "*"
     }
