@@ -25,5 +25,14 @@
                 </untitled_appliedpatches>
             </updates>
         </layout>
+        <translate>
+            <modules>
+                <untitled_appliedpatches>
+                    <files>
+                        <default>Untitled_AppliedPatches.csv</default>
+                    </files>
+                </untitled_appliedpatches>
+            </modules>
+        </translate>
     </adminhtml>
 </config>

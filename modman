@@ -6,6 +6,12 @@ app/code/community/Untitled/AppliedPatches    app/code/community/Untitled/Applie
 # Module Initializer
 app/etc/modules/Untitled_AppliedPatches.xml    app/etc/modules/Untitled_AppliedPatches.xml
 
+# Locales
+app/locale/de_DE/Untitled_AppliedPatches.csv    app/locale/de_DE/Untitled_AppliedPatches.csv
+app/locale/es_ES/Untitled_AppliedPatches.csv    app/locale/es_ES/Untitled_AppliedPatches.csv
+app/locale/fr_FR/Untitled_AppliedPatches.csv    app/locale/fr_FR/Untitled_AppliedPatches.csv
+app/locale/it_IT/Untitled_AppliedPatches.csv    app/locale/it_IT/Untitled_AppliedPatches.csv
+
 # Adminhtml Design
 app/design/adminhtml/default/default/layout/untitled/appliedpatches.xml    app/design/adminhtml/default/default/layout/untitled/appliedpatches.xml
 app/design/adminhtml/default/default/template/untitled/appliedpatches    app/design/adminhtml/default/default/template/untitled/appliedpatches
