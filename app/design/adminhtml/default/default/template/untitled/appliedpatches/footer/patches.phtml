@@ -17,6 +17,7 @@
                 if(el) {
                     var patchName = el.readAttribute('data-patch-name') || '',
                         patchDateAppliedRevertedOn = el.readAttribute('data-patch-applied-date') || '';
+
                     new UntitledAppliedPatches.dialog(patchName, patchDateAppliedRevertedOn).openDialogWindow();
                 }
             });

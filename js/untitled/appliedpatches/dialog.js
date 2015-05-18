@@ -3,19 +3,27 @@ UntitledAppliedPatches.dialog = Class.create();
 
 UntitledAppliedPatches.dialog.prototype = {
 
-    //
+    // Name of patch
     patchName: null,
 
     // Date the patch was either applied or reverted
     appliedRevertedOn: null,
 
+    // Contains dialog window
     dialogWindow: null,
 
+    /**
+     * constructor methodß
+     * @param patchName
+     * @param appliedRevertedOnDate
+     */
     initialize: function(patchName, appliedRevertedOnDate) {
         this.patchName = patchName;
         this.appliedRevertedOn = appliedRevertedOnDate;
     },
-
+    /**
+     * Public method to display dialog window
+     */
     openDialogWindow: function() {
         var content = this._getContent();
 
@@ -37,6 +45,12 @@ UntitledAppliedPatches.dialog.prototype = {
         });
     },
 
+    /**
+     * Merge markup with properties
+     *
+     * @returns String
+     * @private
+     */
     _getContent: function() {
         return new Template(this._getMarkup()).evaluate({
             title: this.patchName,
@@ -44,6 +58,12 @@ UntitledAppliedPatches.dialog.prototype = {
         });
     },
 
+    /**
+     * String markup before template translation
+     *
+     * @returns {string}
+     * @private
+     */
     _getMarkup: function() {
         var markup = "<h2>#{title}</h2>";
         return markup += "<div><strong>Applied On: </strong>#{date}</div>";
